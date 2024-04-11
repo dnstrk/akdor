@@ -6,25 +6,25 @@ const Footer = () => {
         <footer className={cl.footer}>
             <div className={cl.container}>
                 <div className={cl.footerWrap}>
-                    <h5 className={cl.footer__title}>ООО «Винстафф»</h5>
+                    <h5 className={cl.footer__title}>ООО «АКДОР»</h5>
                     <div className={cl.footer__info}>
                         <div className={cl.footer__infoContacts}>
                             <div className={cl.footer__infoContacts_num}>
                                 <span>Телефон:</span>
                                 <a
                                     className={cl.footer__infoContacts_link}
-                                    href="tel:+7(903) 192-83-98"
+                                    href="tel:+7(968) 628-78-44"
                                 >
-                                    <b>+7(903) 192-83-98</b>
+                                    <b>+7(968) 628-78-44</b>
                                 </a>
                             </div>
                             <div className={cl.footer__infoContacts_email}>
                                 <span>Email:</span>
                                 <a
                                     className={cl.footer__infoContacts_link}
-                                    href="mailto:info@win-staff.ru"
+                                    href="mailto:info@akdor77.ru"
                                 >
-                                    <b>info@win-staff.ru</b>
+                                    <b>info@akdor77.ru</b>
                                 </a>
                             </div>
                         </div>
@@ -33,14 +33,12 @@ const Footer = () => {
                                 Адрес:
                             </span>
                             <p className={cl.footer__infoAddr_place}>
-                                117393, г. Москва,<br /> муниципальный округ
-                                Обручевский вн. тер. г., Профсоюзная ул., д. 66,
-                                стр. 1, офис 301
+                            115093, г. Москва,<br /> ул. Люсиновская, д.39, стр. 5, этаж 4, помещение II команата №4
                             </p>
                         </div>
                     </div>
                     <p className={cl.footer__copyright}>
-                        Copyright @ 1998-2024 | Win-Staff – Win-staff.ru Все
+                        Copyright © 2024 | АКДОР - akdor77.ru Все
                         права защищены
                     </p>
                 </div>

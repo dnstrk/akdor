@@ -572,54 +572,11 @@ export default function Home() {
                     <div className="clientInfo-wrap">
                         <div className="clientInfo__img">
                             <img
-                                className="clientInfo__imgAbs c1"
-                                src="/img/clientInfoImgMain.png"
+                                className="clientInfo__imgGroup"
+                                src="/img/clietnInfo_imgGroup.png"
                                 alt=""
                             />
-                            <img
-                                className="clientInfo__imgAbs c2"
-                                src="/img/clientInfoGreenEllipse.svg"
-                                alt=""
-                            />
-                            <img
-                                className="clientInfo__imgAbs c3"
-                                src="/img/clientInfoGreenEllipse_s.svg"
-                                alt=""
-                            />
-                            <img
-                                className="clientInfo__imgAbs c4"
-                                src="/img/clientInfoHorLines.svg"
-                                alt=""
-                            />
-                            <img
-                                className="clientInfo__imgAbs c5"
-                                src="/img/clientInfoOrangeEllipse_s.svg"
-                                alt=""
-                            />
-                            <img
-                                className="clientInfo__imgAbs c6"
-                                src="/img/bannerHorDots.svg"
-                                alt=""
-                            />
-                            <img
-                                className="clientInfo__imgAbs c7"
-                                src="/img/bannerVertDots.svg"
-                                alt=""
-                            />
-                            <img
-                                className="clientInfo__imgAbs c8"
-                                src="/img/clientInfoForm.svg"
-                                alt=""
-                            />
-                            <b className="clientInfo__imgAbs c8_text scrolled">
-                                Мы отбираем для
-                                <br /> вас лучших!
-                            </b>
-                            <img
-                                className="clientInfo__imgAbs c9"
-                                src="/img/clientInfoFormDop.svg"
-                                alt=""
-                            />
+                            
                         </div>
                         <div className="clientInfo__content">
                             <h5 className="clientInfo__contentTitle">
@@ -755,12 +712,12 @@ export default function Home() {
                                     </p>
                                 </li>
                             </ul>
-                            <button
-                                onClick={(e) => setRequestOverlay(true)}
+                            <Link to="/specialties"
+                                
                                 className="stats__rightBtn"
                             >
-                                Заказать персонал
-                            </button>
+                                Показать всех специалистов
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -769,7 +726,7 @@ export default function Home() {
                 <div className="container">
                     <div className="partners-wrap">
                         <h6 className="partners__title">
-                            У нас действительно крутые партнеры
+                            Сотрудничаем с прекрасными партнерами
                         </h6>
                         <div className="partners__cards">
                             <div className="partners__card">
@@ -916,7 +873,8 @@ export default function Home() {
                                 </div>
                             </div>
                             <div className="coop__img">
-                                <img
+                                <img className="coop__imgGroup coop__imgAbs" src="/img/coop_imgGroup.png" alt="" />
+                                {/* <img
                                     className="coop__imgAbs e1"
                                     src="/img/coopEllipsMain.svg"
                                     alt=""
@@ -950,7 +908,7 @@ export default function Home() {
                                     className="coop__imgAbs e7"
                                     src="/img/coopVertDots.svg"
                                     alt=""
-                                />
+                                /> */}
                                 <button
                                     onClick={(e) => setRequestOverlay(true)}
                                     className="coop__imgAbs coop__imgBtn e8"

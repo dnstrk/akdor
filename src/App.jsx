@@ -5,7 +5,6 @@ import TownOverlay from "./components/TownOverlay/TownOverlay";
 import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home";
 import { Route, Routes, useLocation } from "react-router";
-import About from "./pages/About";
 import Spec from "./pages/Spec";
 import RequestOverlay from "./components/RequestOverlay/RequestOverlay";
 import UserContext from "./UserContext";
@@ -377,7 +376,6 @@ function App() {
                 <MessageOverlay />
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="about" element={<About />} />
                     <Route path="specialties" element={<Spec />} />
                     <Route
                         path="personal-agreement"

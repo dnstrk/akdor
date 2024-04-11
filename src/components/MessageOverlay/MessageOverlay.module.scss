@@ -136,24 +136,25 @@
                     transition: 0.15s;
 
                     &:hover {
-                        color: var(--green);
+                        color: var(--light-blue);
                     }
                 }
             }
 
             .writeDrawer__foot__send {
+                cursor: pointer;
                 width: fit-content;
                 padding: 15px 50px;
                 color: var(--white);
                 font-weight: 700;
                 text-align: center;
                 border-radius: 50px;
-                background: var(--orange, #fba457);
+                background: var(--blue);
 
                 transition: 0.1s;
 
                 &:hover {
-                    background: #f19920;
+                    background: var(--light-blue);
                 }
 
                 &:active {

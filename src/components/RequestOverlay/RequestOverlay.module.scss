@@ -131,61 +131,9 @@
                 gap: 14px;
                 
 
-                .specialists__radioGroup__btn {
-                    input[type="radio"] {
-                        display: none;
-                    }
+                
 
-                    label {
-                        font-size: 15px;
-                        font-weight: 500;
-                        color: var(--black);
-                        display: inline-block;
-                        cursor: pointer;
-                        padding: 5px 15px;
-                        line-height: 34px;
-                        border: 1px solid #999;
-                        border-radius: 50px;
-                        user-select: none;
-                        transition: 0.2s;
-                    }
-
-                    input[type="radio"]:checked+label {
-                        color: var(--white);
-                        background-color: #e28424;
-                        border-color: #e28424;
-                    }
-
-                    &:hover {
-                        input[type="radio"]+label {
-                            color: var(--white);
-                            background-color: #f19920;
-                            border-color: #f19920;
-                        }
-                    }
-                }
-
-                .specialists__radioGroup__btnAllSpec {
-                    font-size: 15px;
-                    font-weight: 500;
-                    padding: 10px 20px;
-                    border: 1px solid #f19920;
-                    border-radius: 50px;
-                    user-select: none;
-                    color: #f19920;
-
-                    transition: 0.15s;
-
-                    &:hover {
-                        color: var(--white);
-                        background-color: #ff7f10;
-                        border-color: #ff7f10;
-                    }
-
-                    &:active {
-                        transform: scale(99%);
-                    }
-                }
+               
             }
         }
 
@@ -198,18 +146,19 @@
             position: relative;
 
             .requestDrawer__foot__send {
+                cursor: pointer;
                 width: 100%;
                 padding: 15px;
                 color: var(--white);
                 font-weight: 700;
                 text-align: center;
                 border-radius: 50px;
-                background: var(--orange, #fba457);
+                background: var(--blue);
 
                 transition: 0.1s;
 
                 &:hover {
-                    background: #f19920;
+                    background: var(--light-blue);
                 }
 
                 &:active {
@@ -228,7 +177,7 @@
                     transition: .15s;
 
                     &:hover {
-                        color: var(--green);
+                        color: var(--light-blue);
                     }
                 }
             }

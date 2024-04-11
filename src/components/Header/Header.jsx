@@ -48,7 +48,7 @@ const Header = () => {
                                 </Link>
                             </li>
                             <li className={cl.header__navItem}>
-                                <a className={cl.header__navLink} href="tel:">
+                                <a className={cl.header__navLink} href="tel:+7(968) 628-78-44">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="24"
@@ -61,7 +61,7 @@ const Header = () => {
                                             fill="#272C3E"
                                         />
                                     </svg>
-                                    <b>+7 968 628-78-04</b>
+                                    <b>+7 968 628-78-44</b>
                                 </a>
                             </li>
                         </ul>
