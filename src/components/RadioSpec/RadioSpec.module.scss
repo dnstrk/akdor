@@ -20,21 +20,21 @@
 
     input[type="radio"]:checked+label {
         color: var(--white);
-        background-color: #e28424;
-        border-color: #e28424;
+        background-color: var(--blue);
+        border-color: var(--blue);
     }
 
     &:hover {
         input[type="radio"]+label {
             color: var(--white);
-            background-color: #f19920;
-            border-color: #f19920;
+            background-color: var(--blue);
+            border-color: var(--blue);
         }
     }
 
     .selected {
         color: var(--white);
-        background-color: #e28424;
-        border-color: #e28424;
+        background-color: var(--blue);
+        border-color: var(--blue);
     }
 }

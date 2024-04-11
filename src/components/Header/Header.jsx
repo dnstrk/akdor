@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import cl from "./Header.module.scss";
 import { Link } from "react-router-dom";
 import UserContext from "../../UserContext";
@@ -15,23 +15,30 @@ const Header = () => {
         setMoveTop,
     } = useContext(UserContext);
 
+    useEffect(() => {
+        const header = document.querySelector("header");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 0) {
+                console.log(header.classList);
+                header.classList.add(`${cl.scroll}`);
+            } else if (window.scrollY == 0) {
+                header.classList.remove(`${cl.scroll}`);
+            }
+        });
+    });
+
     return (
         <header className={cl.header}>
             <div className={cl.container}>
                 <div className={cl.header__wrap}>
+                    
                     <Link to={"/"} className={cl.header__logo}>
-                        АКД<span className={cl.r}>О</span>Р
+                    <img className={cl.header__logo1} src="/img/akdor_logo.svg" alt="" />
+                        <span className={cl.header__logo2}>АКДОР</span>
                     </Link>
                     <nav className={cl.header__nav}>
                         <ul className={cl.header__navList}>
-                            <li className={cl.header__navItem}>
-                                <Link
-                                    className={cl.header__navLink}
-                                    to={"/about"}
-                                >
-                                    О нашей компании
-                                </Link>
-                            </li>
                             <li className={cl.header__navItem}>
                                 <Link
                                     className={cl.header__navLink}
@@ -54,7 +61,7 @@ const Header = () => {
                                             fill="#272C3E"
                                         />
                                     </svg>
-                                    <b>+7 903 192-83-98</b>
+                                    <b>+7 968 628-78-04</b>
                                 </a>
                             </li>
                         </ul>
@@ -74,13 +81,26 @@ const Header = () => {
                         <button className={cl.mediaTownCall}>
                             <a
                                 className={cl.mediaTownCall_Link}
-                                href="tel:79031928398"
+                                href="tel:+79686287804"
                             >
-                                <img
-                                    className={cl.mediaTownCall_LinkImg}
-                                    src="/img/headerPhoneMedia.svg"
-                                    alt=""
-                                />
+                                <svg
+                                    width="25"
+                                    height="25"
+                                    viewBox="0 0 25 25"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <rect
+                                        width="25"
+                                        height="25"
+                                        rx="12.5"
+                                        fill="#B0AAD0"
+                                    />
+                                    <path
+                                        d="M16.9703 14.5492L18.4486 16.0275C18.7531 16.3321 18.7531 16.8258 18.4486 17.1304C16.802 18.777 14.1952 18.9622 12.3324 17.5651L12.2238 17.4836C10.8186 16.4297 9.57029 15.1814 8.51639 13.7762L8.43494 13.6676C7.03778 11.8048 7.22304 9.19801 8.86961 7.55145C9.17416 7.24689 9.66794 7.24689 9.9725 7.55145L11.4508 9.02974C11.8413 9.42026 11.8413 10.0534 11.4508 10.4439L10.4477 11.447C10.2432 11.6515 10.1925 11.964 10.3218 12.2226C11.0695 13.718 12.282 14.9305 13.7774 15.6782C14.036 15.8075 14.3485 15.7568 14.553 15.5523L15.5561 14.5492C15.9466 14.1587 16.5797 14.1587 16.9703 14.5492Z"
+                                        fill="white"
+                                    />
+                                </svg>
                             </a>
                         </button>
                     </div>
@@ -89,6 +109,12 @@ const Header = () => {
                         className={cl.header__orderBtn}
                     >
                         Заявка на персонал
+                    </button>
+                    <button
+                        onClick={(e) => setMessageOverlay(true)}
+                        className={cl.header__messageBtn}
+                    >
+                        Написать нам
                     </button>
                     <div className={cl.mediaHeader__order}>
                         <button

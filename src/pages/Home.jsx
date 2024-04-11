@@ -65,68 +65,68 @@ export default function Home() {
     }
 
     //< паралакс для кружков
-    useEffect(() => {
-        const s5 = document.querySelector(".s5");
-        const s8 = document.querySelector(".s8");
-        const c3 = document.querySelector(".c3");
-        const c5 = document.querySelector(".c5");
+    // useEffect(() => {
+    //     const s5 = document.querySelector(".s5");
+    //     const s8 = document.querySelector(".s8");
+    //     const c3 = document.querySelector(".c3");
+    //     const c5 = document.querySelector(".c5");
 
-        document.onmousemove = (e) => {
-            let x = e.clientX / window.innerWidth;
-            let y = e.clientY / window.innerHeight;
+    //     document.onmousemove = (e) => {
+    //         let x = e.clientX / window.innerWidth;
+    //         let y = e.clientY / window.innerHeight;
 
-            s5.style.transform =
-                "translate(-" + x * 20 + "px, -" + y * 20 + "px)";
-            s8.style.transform =
-                "translate(+" + x * 20 + "px, +" + y * 20 + "px)";
-            c3.style.transform =
-                "translate(-" + x * 20 + "px, -" + y * 20 + "px)";
-            c5.style.transform =
-                "translate(+" + x * 20 + "px, -" + y * 20 + "px)";
-        };
+    //         s5.style.transform =
+    //             "translate(-" + x * 20 + "px, -" + y * 20 + "px)";
+    //         s8.style.transform =
+    //             "translate(+" + x * 20 + "px, +" + y * 20 + "px)";
+    //         c3.style.transform =
+    //             "translate(-" + x * 20 + "px, -" + y * 20 + "px)";
+    //         c5.style.transform =
+    //             "translate(+" + x * 20 + "px, -" + y * 20 + "px)";
+    //     };
 
-        const observer = new IntersectionObserver((entries, options) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                    // var typed = new Typed(".s3_text", {
-                    //   strings: ["Более 300 000 <br /> анкет в базе"],
-                    //   typeSpeed: 60,
-                    //   startDelay: 1500,
-                    //   // backSpeed: 100,
-                    //   backDelay: 5000,
-                    //   fadeOut: true,
-                    //   // loop: true,
-                    // });
-                    // var typed = new Typed(".s4_text", {
-                    //   strings: [
-                    //     "18519 работников<br /> мы вывели на объекты<br /> заказчиков",
-                    //   ],
-                    //   typeSpeed: 30,
-                    //   startDelay: 2500,
-                    //   // backSpeed: 100,
-                    //   backDelay: 5000,
-                    //   fadeOut: true,
-                    //   // loop: true,
-                    // });
-                    // var typed = new Typed(".c8_text", {
-                    //   strings: ["Мы отбираем для<br /> вас лучших!"],
-                    //   typeSpeed: 60,
-                    //   startDelay: 500,
-                    //   // backSpeed: 100,
-                    //   backDelay: 5000,
-                    //   fadeOut: true,
-                    //   // loop: true,
-                    // });
-                } else if (!entry.isIntersecting) {
-                    entry.target.classList.remove("visible");
-                }
-            });
-        });
+    //     const observer = new IntersectionObserver((entries, options) => {
+    //         entries.forEach((entry) => {
+    //             if (entry.isIntersecting) {
+    //                 entry.target.classList.add("visible");
+    //                 // var typed = new Typed(".s3_text", {
+    //                 //   strings: ["Более 300 000 <br /> анкет в базе"],
+    //                 //   typeSpeed: 60,
+    //                 //   startDelay: 1500,
+    //                 //   // backSpeed: 100,
+    //                 //   backDelay: 5000,
+    //                 //   fadeOut: true,
+    //                 //   // loop: true,
+    //                 // });
+    //                 // var typed = new Typed(".s4_text", {
+    //                 //   strings: [
+    //                 //     "18519 работников<br /> мы вывели на объекты<br /> заказчиков",
+    //                 //   ],
+    //                 //   typeSpeed: 30,
+    //                 //   startDelay: 2500,
+    //                 //   // backSpeed: 100,
+    //                 //   backDelay: 5000,
+    //                 //   fadeOut: true,
+    //                 //   // loop: true,
+    //                 // });
+    //                 // var typed = new Typed(".c8_text", {
+    //                 //   strings: ["Мы отбираем для<br /> вас лучших!"],
+    //                 //   typeSpeed: 60,
+    //                 //   startDelay: 500,
+    //                 //   // backSpeed: 100,
+    //                 //   backDelay: 5000,
+    //                 //   fadeOut: true,
+    //                 //   // loop: true,
+    //                 // });
+    //             } else if (!entry.isIntersecting) {
+    //                 entry.target.classList.remove("visible");
+    //             }
+    //         });
+    //     });
 
-        const scrolledEl = document.querySelectorAll(".scrolled");
-        scrolledEl.forEach((el) => observer.observe(el));
-    });
+    //     const scrolledEl = document.querySelectorAll(".scrolled");
+    //     scrolledEl.forEach((el) => observer.observe(el));
+    // });
     //>
 
     //только числовой ввод в countBanner и текстовый в townBanner
@@ -435,6 +435,9 @@ export default function Home() {
                             </form>
                         </div>
                         <div className="banner__img">
+                            <img className="banner__imgGroup.png" src="/img/banner_imgGroup.png" alt="" />
+                        </div>
+                        {/* <div className="banner__img">
                             <img
                                 className="banner__imgAbs s1"
                                 src="/img/bannerImgMain.png"
@@ -493,7 +496,7 @@ export default function Home() {
                                 src="/img/bannerHorLines.svg"
                                 alt=""
                             />
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </section>

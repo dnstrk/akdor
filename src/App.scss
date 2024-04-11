@@ -35,7 +35,7 @@
                 font-weight: 700;
 
                 .banner__infoTitle_marked {
-                    color: var(--orange);
+                    color: var(--blue);
                 }
             }
 
@@ -110,56 +110,24 @@
                     flex-wrap: wrap;
                     gap: 14px;
 
-                    .banner__specRadioGroup__btn {
-                        input[type="radio"] {
-                            display: none;
-                        }
-
-                        label {
-                            font-size: 15px;
-                            font-weight: 500;
-                            color: var(--black);
-                            display: inline-block;
-                            cursor: pointer;
-                            padding: 5px 15px;
-                            line-height: 34px;
-                            border: 1px solid #999;
-                            border-radius: 50px;
-                            user-select: none;
-                            transition: 0.2s;
-                        }
-
-                        input[type="radio"]:checked + label {
-                            color: var(--white);
-                            background-color: #e28424;
-                            border-color: #e28424;
-                        }
-
-                        &:hover {
-                            input[type="radio"] + label {
-                                color: var(--white);
-                                background-color: #f19920;
-                                border-color: #f19920;
-                            }
-                        }
-                    }
+                   
 
                     .banner__specRadioGroup__btnAllSpec {
                         font-size: 15px;
                         font-weight: 500;
                         height: 100%;
                         padding: 10px 20px;
-                        border: 1px solid #f19920;
+                        border: 1px solid var(--blue);
                         border-radius: 50px;
                         user-select: none;
-                        color: #f19920;
+                        color: var(--blue);
 
                         transition: 0.15s;
 
                         &:hover {
                             color: var(--white);
-                            background-color: #ff7f10;
-                            border-color: #ff7f10;
+                            background-color: var(--blue);
+                            border-color: var(--blue);
                         }
 
                         &:active {
@@ -216,18 +184,19 @@
                     }
 
                     .banner__formBottom__btnSend {
+                        cursor: pointer;
                         width: 100%;
                         padding: 15px;
                         color: var(--white);
                         font-weight: 700;
                         text-align: center;
                         border-radius: 50px;
-                        background: var(--orange, #fba457);
+                        background: var(--blue);
 
                         transition: 0.15s;
 
                         &:hover {
-                            background: #f19920;
+                            background: var(--light-blue);
                         }
 
                         &:active {
@@ -243,100 +212,9 @@
             width: 600px;
             height: 630px;
 
-            .banner__imgAbs {
-                position: absolute;
-                content: "";
-                // left: 0;
-                // top: 0;
-            }
-
-            .s1 {
-                z-index: 10;
-            }
-
-            .s2 {
-                z-index: 9;
-                left: 60px;
-                top: 68px;
-            }
-
-            .s3 {
-                z-index: 10;
-                left: -60px;
-                top: 140px;
-            }
-
-            .s3_1 {
-                z-index: 10;
-                left: -18px;
-                top: 158px;
-            }
-
-            .s3_text {
-                visibility: hidden;
-                opacity: 0;
-                z-index: 10;
-                left: -20px;
-                top: 190px;
-                font-size: 14px;
-
-                transition: 4s;
-            }
-
-            .s4 {
-                z-index: 11;
-                left: 400px;
-                top: 250px;
-            }
-
-            .s4_text {
-                visibility: hidden;
-                opacity: 0;
-                width: 180px;
-                z-index: 11;
-                left: 432px;
-                top: 300px;
-                font-size: 14px;
-
-                transition: 5s;
-            }
-
-            .s5 {
-                transition: 0.2s;
-            }
-
-            .s6 {
-                bottom: 30px;
-                animation-name: puls;
-                animation-duration: 5s;
-                animation-iteration-count: infinite;
-            }
-
-            .s7 {
-                z-index: 8;
-                left: 460px;
-                top: 50px;
-                animation-name: puls;
-                animation-duration: 5s;
-                animation-iteration-count: infinite;
-            }
-
-            .s8 {
-                transition: 0.2s;
-                z-index: 10;
-                left: 500px;
-                top: 120px;
-            }
-
-            .s9 {
-                z-index: 11;
-                bottom: 66px;
-                right: 50px;
-            }
-
-            .visible {
-                visibility: visible;
-                opacity: 1;
+            .banner__imgGroup {
+                width: 100%;
+                height: 100%;
             }
         }
     }
@@ -1609,7 +1487,7 @@
                     font-weight: 700;
 
                     .banner__infoTitle_marked {
-                        color: var(--green);
+                        color: var(--blue);
                     }
                 }
 
@@ -1705,15 +1583,15 @@
 
                             input[type="radio"]:checked + label {
                                 color: var(--white);
-                                background-color: #e28424;
-                                border-color: #e28424;
+                                background-color: var(--blue);
+                                border-color: var(--blue);
                             }
 
                             &:hover {
                                 input[type="radio"] + label {
                                     color: var(--white);
-                                    background-color: #f19920;
-                                    border-color: #f19920;
+                                    background-color: var(--blue);
+                                    border-color: var(--blue);
                                 }
                             }
                         }
