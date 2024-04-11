@@ -409,7 +409,6 @@ export default function Home() {
                                         placeholder="Количество"
                                     />
                                     <button
-                                        // onClick={clickHandler}
                                         onClick={() =>
                                             sendRequestForm(
                                                 "send.php",
