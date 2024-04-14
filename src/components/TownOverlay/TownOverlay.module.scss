@@ -45,12 +45,11 @@
             }
 
             .town__selectHead__currentTown {
-                color: var(--green);
+                color: var(--blue);
                 font-size: 16px;
                 font-weight: 700;
-                padding: 10px 30px;
+                padding: 10px 10px;
                 border-radius: 50px;
-                background: var(--light-gray);
 
                 margin-right: auto;
                 margin-left: 6px;
@@ -129,12 +128,12 @@
                 font-weight: 700;
 
                 border-radius: 50px;
-                background: var(--orange, #FBA457);
+                background: var(--blue);
 
                 transition: .1s;
 
                 &:hover {
-                    background: #F19920;
+                    background: var(--light-blue);
                     transform: scale(101%);
                 }
 
@@ -159,7 +158,8 @@
                 transition: .2s;
 
                 &:hover {
-                    color: var(--green);
+                    font-weight: 700;
+                    color: var(--blue);
                 }
             }
 
