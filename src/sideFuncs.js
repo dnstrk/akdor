@@ -1,15 +1,21 @@
 //маркировка input при незаполненном phone
 export function phoneValidationMarker(id, phone) {
     const inpPhone = document.getElementById(`${id}`);
-    // if (phone.length > 0) {
         if (phone.length < 18) {
             inpPhone.style.borderColor = "red";
         } else {
             inpPhone.style.borderColor = "green";
         }
-    // } else {
-        // inpPhone.style.borderColor = "";
-    // }
+}
+
+export function nameValidationMarker(id, name) {
+    const inpName = document.getElementById(`${id}`);
+    // if (phone.length > 0) {
+    if (name.length == 0) {
+        inpName.style.borderColor = "red";
+    } else {
+        inpName.style.borderColor = "green";
+    }
 }
 
 //маркировка input при незаполненном email

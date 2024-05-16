@@ -19,6 +19,8 @@ export default function Home() {
         setPhoneBanner,
         mailBanner,
         setMailBanner,
+        nameBanner,
+        setNameBanner,
         townBanner,
         setTownBanner,
         countBanner,
@@ -37,6 +39,8 @@ export default function Home() {
         emailValidationMarker,
         townValidation,
         townValidationMarker,
+        nameValidation,
+        nameValidationMarker,
 
         sendRequestForm,
     } = useContext(UserContext);
@@ -315,6 +319,26 @@ export default function Home() {
                                         placeholder="Ваш e-mail"
                                     />
                                 </div>
+                                <input
+                                        className="banner__actionInp__name"
+                                        name="inpNameB"
+                                        id="inpNameB"
+                                        type="text"
+                                        value={nameBanner}
+                                        onBlur={() => {
+                                            nameValidation(nameBanner);
+                                        
+                                            nameBanner.length > 0 &&
+                                                nameValidationMarker(
+                                                    "inpNameB",
+                                                    nameBanner
+                                                );
+                                        }}
+                                        onChange={(e) =>
+                                            setNameBanner(e.target.value)
+                                        }
+                                        placeholder="Ваше имя"
+                                    />
                                 <p className="banner__specText">
                                     Выберите специалиста
                                 </p>
@@ -414,12 +438,14 @@ export default function Home() {
                                                 "send.php",
                                                 phoneBanner,
                                                 mailBanner,
+                                                nameBanner,
                                                 selectedSpec,
                                                 townBanner,
                                                 countBanner,
                                                 "B",
                                                 setPhoneBanner,
                                                 setMailBanner,
+                                                setNameBanner,
                                                 setSelectedSpec,
                                                 setTownBanner,
                                                 setCountBanner
@@ -434,7 +460,7 @@ export default function Home() {
                             </form>
                         </div>
                         <div className="banner__img">
-                            <img className="banner__imgGroup.png" src="/img/banner_imgGroup.png" alt="" />
+                            <img className="banner__imgGroup" src="/img/banner_imgGroup.png" alt="" />
                         </div>
                         {/* <div className="banner__img">
                             <img

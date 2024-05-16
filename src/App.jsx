@@ -14,6 +14,7 @@ import HeaderSub from "./components/HeaderSub/HeaderSub";
 import {
     phoneValidationMarker,
     emailValidationMarker,
+    nameValidationMarker,
     countValidationMarker,
     townValidationMarker,
     scrollDisable,
@@ -21,8 +22,6 @@ import {
 } from "./sideFuncs";
 import axios from "axios";
 import PersonalAgreement from "./pages/PersonalAgreement";
-
-// const RequestOverlay = lazy(()=> import('./components/RequestOverlay/RequestOverlay'))
 
 function App() {
     // стейт списка городов из файла price.json
@@ -63,12 +62,14 @@ function App() {
     // стейты формы создания заявки для bannerForm
     const [phoneBanner, setPhoneBanner] = useState("");
     const [mailBanner, setMailBanner] = useState("");
+    const [nameBanner, setNameBanner] = useState("");
     const [townBanner, setTownBanner] = useState("");
     const [countBanner, setCountBanner] = useState("");
 
     // стейты формы создания заявки для requestForm
     const [phoneRequest, setPhoneRequest] = useState("");
     const [mailRequest, setMailRequest] = useState("");
+    const [nameRequest, setNameRequest] = useState("");
     const [townRequest, setTownRequest] = useState("");
     const [countRequest, setCountRequest] = useState("");
 
@@ -80,6 +81,7 @@ function App() {
     // стейты валидации для отправки форм
     const [phoneValid, setPhoneValid] = useState(false);
     const [mailValid, setMailValid] = useState(false);
+    const [nameValid, setNameValid] = useState(false);
     const [townValid, setTownValid] = useState(false);
     const [countValid, setCountValid] = useState(false);
 
@@ -155,6 +157,7 @@ function App() {
         url = "send.php",
         phone,
         mail,
+        name,
         spec,
         town,
         count,
@@ -163,6 +166,7 @@ function App() {
 
         setPhone,
         setMail,
+        setName,
         setSpec,
         setTown,
         setCount
@@ -171,6 +175,7 @@ function App() {
             selectedSpec.length > 0 &&
             phoneValid &&
             mailValid &&
+            nameValid &&
             townValid &&
             countValid
         ) {
@@ -178,6 +183,7 @@ function App() {
 
             formData.append("phone", phone); //append the values with key, value pair
             formData.append("mail", mail);
+            formData.append("name", name);
             formData.append("spec", spec);
             formData.append("town", town);
             formData.append("count", count);
@@ -200,10 +206,10 @@ function App() {
             setRequestAccept(true);
             setRequestOverlay(true);
 
-            console.log("correct");
 
             setPhone("");
             setMail("");
+            setName("");
             setSpec("");
             setTown("");
             setCount("");
@@ -222,6 +228,11 @@ function App() {
             inpEmailBanner.style.borderColor = "transparent";
             setMailValid(false);
 
+            //сброс валидации name поля
+            const inpNameBanner = document.getElementById(`inpName${idLetter}`);
+            inpNameBanner.style.borderColor = "transparent";
+            setNameValid(false);
+
             //сброс валидации count поля
             const inpTownBanner = document.getElementById(`inpTown${idLetter}`);
             inpTownBanner.style.borderColor = "transparent";
@@ -239,19 +250,21 @@ function App() {
                 r.checked = false;
             });
         } else {
-            console.log("incorrect");
 
             phoneValidationMarker(`inpPhone${idLetter}`, phone);
             emailValidationMarker(`inpEmail${idLetter}`, mail);
+            nameValidationMarker(`inpName${idLetter}`, name);
             townValidationMarker(`inpTown${idLetter}`, town);
             countValidationMarker(`inpCount${idLetter}`, count);
         }
     }
 
-    function showPosition(position) {
-        var lat = position.coords.latitude;
-        var lon = position.coords.longitude;
-        // console.log(lat + " " + lon);
+    function nameValidation(name) {
+        if (name.length == 0) {
+            setNameValid(false);
+        } else {
+            setNameValid(true);
+        }
     }
 
     useEffect(() => {
@@ -293,6 +306,8 @@ function App() {
                     setMailBanner,
                     townBanner,
                     setTownBanner,
+                    nameBanner,
+                    setNameBanner,
                     countBanner,
                     setCountBanner,
                     //</форма заявки в секции banner>
@@ -304,10 +319,12 @@ function App() {
 
                     phoneRequest,
                     mailRequest,
+                    nameRequest,
                     townRequest,
                     countRequest,
                     setPhoneRequest,
                     setMailRequest,
+                    setNameRequest,
                     setTownRequest,
                     setCountRequest,
 
@@ -339,6 +356,8 @@ function App() {
                     countValidationMarker,
                     emailValidation,
                     emailValidationMarker,
+                    nameValidation,
+                    nameValidationMarker,
                     townValidation,
                     townValidationMarker,
 
